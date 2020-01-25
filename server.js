@@ -6,7 +6,7 @@ const cors = require('cors')
 
 dotenv.config();
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MLAB_URI || 'mongodb://localhost/exercise-track', { useNewUrlParser: true, useUnifiedTopology: true }).then(res => console.log("Sucessfuly connected to database"), rej => console.error("No connection"));
+mongoose.connect(process.env.MLAB_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(res => console.log("Sucessfuly connected to database"), rej => console.error("No connection"));
 
 app.use(cors())
 
