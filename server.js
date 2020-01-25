@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //app.use(express.static(path.join(__dirname, 'public')))
-app.use('/public', express.static(process.cwd() + '/public'));
+app.use(express.static(process.cwd() + '/public'));
 
 app.get('/', function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
