@@ -13,10 +13,9 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-
-app.use(express.static('public'))
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html')
+app.use('/public', express.static(process.cwd() + '/public'));
+app.get('/', function (req, res) {
+  res.sendFile(process.cwd() + '/views/index.html');
 });
 
 //Adding new user
