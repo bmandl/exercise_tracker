@@ -13,9 +13,10 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html')
+  res.sendFile(path.join(__dirname, '/views/index.html'))
+});
 
 //Adding new user
 var UserSchema = new mongoose.Schema({
