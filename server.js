@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.static(path.join(process.cwd(),'/public')));  //heroku update
+app.use(express.static(path.join(process.cwd(),'public')));  //heroku update
 app.get('/', (req, res) => {
-  res.sendFile(path.join(process.cwd(), '/views/index.html')) //heroku update
+  res.sendFile(path.join(process.cwd(), 'views/index.html')) //heroku update
 });
 
 //Adding new user
