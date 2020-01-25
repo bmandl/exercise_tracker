@@ -16,7 +16,7 @@
 		"shortid": "^2.2.6"
 	},
 	"engines": {
-		"node": "6.9.1"
+		"node": "12.14.1"
 	},
 	"repository": {
 		"url": "https://github.com/bmandl/exercise_tracker.git"
