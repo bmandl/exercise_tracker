@@ -13,11 +13,10 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-//app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.static(process.cwd() + '/public'));
+app.use(express.static(process.cwd() + '/public')); //heroku
 
 app.get('/', function (req, res) {
-  res.sendFile(process.cwd() + '/views/index.html');
+  res.sendFile(process.cwd() + '/views/index.html'); //heroku
 });
 
 //Adding new user
